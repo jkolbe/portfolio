@@ -1,0 +1,28 @@
+h1 {
+  font-size: 80px; }
+
+body {
+  font-family: Roboto;
+  background-color: #efefef;
+  margin: 0;
+  padding: 0; }
+
+.header__ctn {
+  position: relative;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  color: white; }
+  .header__ctn .hero {
+    z-index: 1; }
+  .header__ctn h1 {
+    font-family: 'Parisienne', cursive; }
+  .header__ctn .dotted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
