@@ -18,7 +18,8 @@ class Canvas extends Component {
       max_diameter: 60,
       direction: 1,
       iteration: 1,
-      color_array: this.createColorRange(this.color_1, this.color_2)
+      // color_array: this.createColorRange(this.color_1, this.color_2, 255),
+      color_array: this.createColorRange(this.color_1, this.color_2, 65)
     }
   }
 
@@ -32,12 +33,6 @@ class Canvas extends Component {
     } catch (e) {
         console.log(e)
     }
-
-    this.drawCircle(300, 100, 80, 'green')
-    this.drawCircle(50, 50, 20)
-
-    console.log(this.state.color_array)
-
   }
 
   componentWillUnmount() {
@@ -45,8 +40,9 @@ class Canvas extends Component {
     window.removeEventListener('resize', this.mouseMoving);
   }
 
-  drawCircle(x, y, r, color = 'white') {
-    this.ctx.fillStyle = color;
+  drawCircle(x, y, r, color = {r: 255, g: 255, b: 255}) {
+    // this.ctx.fillStyle = color;
+    this.ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
     this.ctx.beginPath();
     this.ctx.arc(x, y, r, 0, 2 * Math.PI);
     this.ctx.fill();
@@ -67,11 +63,12 @@ class Canvas extends Component {
     const cnvRect = this.canvas.getBoundingClientRect();
     if (e.clientX >= cnvRect.left && e.clientX <= cnvRect.right && e.clientY >= cnvRect.top && e.clientY <= cnvRect.bottom) {
       // Mouse is inside canvas.
-      const {diameter, min_diameter, max_diameter, direction, iteration} = this.state
+      const {diameter, min_diameter, max_diameter, direction, iteration, color_array} = this.state
       var posx = e.clientX - cnvRect.left;
       var posy = e.clientY - cnvRect.top;
+      const color = color_array[diameter]
 
-      this.drawCircle(posx, posy, diameter, 'green')
+      this.drawCircle(posx, posy, diameter, color)
 
       let newDirection = direction
       if (diameter > max_diameter){
@@ -94,13 +91,13 @@ class Canvas extends Component {
     return {r:r, g:g, b:b};
   }
 
-  createColorRange = (c1, c2) => {
+  createColorRange = (c1, c2, range) => {
     var colorList = [], tmpColor;
-    for (var i=0; i<255; i++) {
+    for (var i=0; i<range; i++) {
         tmpColor = this.gColor();
-        tmpColor.r = c1.r + ((i*(c2.r-c1.r))/255);
-        tmpColor.g = c1.g + ((i*(c2.g-c1.g))/255);
-        tmpColor.b = c1.b + ((i*(c2.b-c1.b))/255);
+        tmpColor.r = c1.r + ((i*(c2.r-c1.r))/range);
+        tmpColor.g = c1.g + ((i*(c2.g-c1.g))/range);
+        tmpColor.b = c1.b + ((i*(c2.b-c1.b))/range);
         colorList.push(tmpColor);
     }
     return colorList;
