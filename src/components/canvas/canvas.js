@@ -18,8 +18,7 @@ class Canvas extends Component {
       max_diameter: 60,
       direction: 1,
       iteration: 1,
-      // color_array: this.createColorRange(this.color_1, this.color_2, 255),
-      color_array: this.createColorRange(this.color_1, this.color_2, 65)
+      color_array: this.interpolateColors(this.color_1, this.color_2, 65)
     }
   }
 
@@ -41,7 +40,6 @@ class Canvas extends Component {
   }
 
   drawCircle(x, y, r, color = {r: 255, g: 255, b: 255}) {
-    // this.ctx.fillStyle = color;
     this.ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
     this.ctx.beginPath();
     this.ctx.arc(x, y, r, 0, 2 * Math.PI);
@@ -91,16 +89,20 @@ class Canvas extends Component {
     return {r:r, g:g, b:b};
   }
 
-  createColorRange = (c1, c2, range) => {
-    var colorList = [], tmpColor;
-    for (var i=0; i<range; i++) {
-        tmpColor = this.gColor();
-        tmpColor.r = c1.r + ((i*(c2.r-c1.r))/range);
-        tmpColor.g = c1.g + ((i*(c2.g-c1.g))/range);
-        tmpColor.b = c1.b + ((i*(c2.b-c1.b))/range);
-        colorList.push(tmpColor);
+  interpolateColors = (c1, c2, steps) => {
+    const stepFactor = 1 / (steps - 1);
+    let interpolatedColorArray = [];
+
+    for(var i = 0; i < steps; i++) {
+      let temp = this.gColor();
+      let factor = stepFactor * i;
+      temp.r = Math.round( (c1.r + factor) * (c2.r - c1.r) );
+      temp.g = Math.round( (c1.g + factor) * (c2.g - c1.g) );
+      temp.b = Math.round( (c1.b + factor) * (c2.b - c1.b) );
+      interpolatedColorArray.push(temp);
     }
-    return colorList;
+
+    return interpolatedColorArray;
   }
 
 
