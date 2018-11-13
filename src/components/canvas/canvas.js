@@ -40,6 +40,18 @@ class Canvas extends Component {
     window.removeEventListener('resize', this.mouseMoving);
   }
 
+  drawTriangle = (x, y, side, color = {r: 255, g: 255, b: 255}) => {
+    side = side * 2
+    var h = side * (Math.sqrt(3)/2);
+    this.ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
+    this.ctx.beginPath();
+    this.ctx.moveTo(x, y);
+    this.ctx.lineTo(x + side/2, y+h);
+    this.ctx.lineTo(x - side/2, y+h);
+    this.ctx.fill();
+    this.ctx.closePath();
+  }
+
   drawCircle(x, y, r, color = {r: 255, g: 255, b: 255}) {
     this.ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
     this.ctx.beginPath();
@@ -67,7 +79,8 @@ class Canvas extends Component {
       var posy = e.clientY - cnvRect.top;
       const color = color_array[diameter]
 
-      this.drawCircle(posx, posy, diameter, color)
+      // this.drawCircle(posx, posy, diameter, color)
+      this.drawTriangle(posx, posy, diameter, color)
 
       let newDirection = direction
       if (diameter > max_diameter){
