@@ -21,7 +21,7 @@ class Footer extends Component {
       <footer className='Footer__ctn'>
         <div className='footer_icons'>
           {this.state.links.map(l => (
-            <a target='_blank' href={l.link}>
+            <a target='_blank' rel='noopener noreferrer' href={l.link} key={l.link}>
               <Icon fontSize='large' className={l.icon} />
             </a>
           ))}

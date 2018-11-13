@@ -7,6 +7,8 @@ class Training extends Component {
 
   constructor(){
     super();
+
+    this.timeline_items = null;
     this.state = {
       timeline: [
         {time: '1934', description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'},
@@ -21,11 +23,61 @@ class Training extends Component {
 
   }
 
-  render() {
+  componentDidMount() {
+    window.addEventListener('load', this.animateTimeline);
+    window.addEventListener('resize', this.animateTimeline);
+    window.addEventListener('scroll', this.animateTimeline);
+
+    try {
+      this.timeline_items = document.querySelectorAll('.timeline li');
+    } catch (e) {
+        console.log(e)
+    }
+  }
+
+
+  componentWillUnmount() {
+    window.removeEventListener('load', this.animateTimeline);
+    window.removeEventListener('resize', this.animateTimeline);
+    window.removeEventListener('scroll', this.animateTimeline);
+  }
+
+  animateTimeline = () => {
+    console.log(this.timeline_items)
+    for (var i = 0; i < this.timeline_items.length; i++) {
+      if (this.isElementInViewport(this.timeline_items[i])) {
+        this.timeline_items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  isElementInViewport = (el) => {
+    var rect = el.getBoundingClientRect();
     return (
-      <section id='training' className='Training__ctn full-height'>
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  render() {
+    const {timeline} = this.state;
+
+    return (
+      <section id='training' className='Training__ctn'>
         <h2>TRAINING</h2>
         <div className='timeline'>
+          <ul>
+            {timeline.map((t, i) => (
+              <li key={`timeline${i}`}>
+                <div className='timeline_element'>
+                  <time>{t.time}</time>
+                  {t.description}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     );
