@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
-
-import {withRouter, BrowserRouter as Link } from "react-router-dom";
+import {withRouter } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-// import { browserHistory } from 'react-router'
-// browserHistory.push('/path/some/where')
-
 import Button from '@material-ui/core/Button';
-
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
-// import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Icon from '@material-ui/core/Icon';
-
 
 import './nav.css'
 
@@ -30,7 +22,6 @@ class Nav extends Component {
         {text: 'About Me', href: 'about'},
         {text: 'Training', href: 'training'},
         {text: 'Portfolio', href: 'portfolio'},
-        
       ]
     };
   }

@@ -40,5 +40,5 @@
     flex-basis: 50%;
     width: 300px;
     height: 350px;
-    background-color: #F7A398;
+    border: 2px solid black;
     margin-right: 40px; }
