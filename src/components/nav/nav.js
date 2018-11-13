@@ -27,8 +27,10 @@ class Nav extends Component {
       open: false,
       pages: [
         {text: 'Home', href: 'home'},
-        {text: 'Blah', href: 'blah'},
         {text: 'About Me', href: 'about'},
+        {text: 'Training', href: 'training'},
+        {text: 'Portfolio', href: 'portfolio'},
+        
       ]
     };
   }
