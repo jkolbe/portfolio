@@ -1,0 +1,19 @@
+.Hero__ctn {
+  position: relative;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  color: white; }
+  .Hero__ctn .hero {
+    z-index: 1; }
+  .Hero__ctn h1 {
+    font-family: "Parisienne", cursive; }
+  .Hero__ctn .dotted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }

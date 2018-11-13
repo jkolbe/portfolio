@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from '../components/nav/nav'
 
@@ -12,7 +12,7 @@ import NotFound from '../containers/notFound'
 
 const Routes = () => (
   <Router>
-    <div>
+    <div className='App__ctn'>
       <Nav />
       <Switch>
         <Route path="/" exact component={Home} />

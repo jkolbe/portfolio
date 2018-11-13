@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 class Canvas extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.canvas = null;
     this.ctx = null;
     this.color_1 = this.gColor(0,0,0);
     this.color_2 = this.gColor(250,127,119);
+    this.id = props.id
 
     this.state = {
       width: window.innerWidth,
@@ -27,7 +28,7 @@ class Canvas extends Component {
     window.addEventListener('mousemove', this.mouseMoving);
 
     try {
-      this.canvas = document.getElementById("myCanvas");
+      this.canvas = document.getElementById(this.id);
       this.ctx = this.canvas.getContext("2d");
     } catch (e) {
         console.log(e)
@@ -111,7 +112,7 @@ class Canvas extends Component {
     const {width, height} = this.state
     return (
       <div id="canvas">
-          <canvas id="myCanvas" width={width} height={height}></canvas>
+          <canvas id={this.id} width={width} height={height}></canvas>
       </div>
     );
   }

@@ -1,38 +1,19 @@
-@import './variables.scss';
+@import './helpers.scss';
 
 h1 {
   font-size: 80px;
 }
 
 body {
-  font-family: Roboto;
-  background-color: #efefef;
+  font-family: $roboto;
   margin: 0;
   padding: 0;
 }
 
-
-.header__ctn {
+/*.App__ctn {
   position: relative;
-  background-color: $black;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+}*/
+
+.full-height {
   height: 100vh;
-  color: white;
-
-  .hero {
-    z-index: 1;
-  }
-
-  h1 {
-    font-family: 'Parisienne', cursive;
-  }
-
-  .dotted {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-  }
-
 }

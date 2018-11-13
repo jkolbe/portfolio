@@ -6,13 +6,13 @@ import './utils/scss/global.css';
 import * as serviceWorker from './serviceWorker';
 import Routes from './routes';
 
-import purple from '@material-ui/core/colors/purple';
+// import purple from '@material-ui/core/colors/purple';
 
 const theme = createMuiTheme({
-  palette: {
-    primary: purple,
-    type: 'dark',
-  },
+  // palette: {
+  //   primary: purple,
+  //   type: 'dark',
+  // },
 });
 
 ReactDOM.render(<MuiThemeProvider theme={theme}><Routes /></MuiThemeProvider>, document.getElementById('root'));

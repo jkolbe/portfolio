@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
 
-import Canvas from './../components/canvas/canvas';
+import Hero from './../components/hero/hero';
+import About from './../components/about/about';
 
 class Home extends Component {
   render() {
     return (
       <div>
 
-        <div className="header__ctn">
-          <div className="dotted">
-            <Canvas />
-          </div>
-
-          <div className="hero">
-            <p>UX. CODE. </p>
-            <h1>Joanna Kolbe</h1>
-            <p>My journey through UX</p>
-          </div>
-        </div>
+        <Hero />
 
 
-        <div>
+        <div id='blah' className='full-height'>
           <h1>BLAH</h1>
         </div>
-      
+
+        <About />
+
       </div>
 
     );

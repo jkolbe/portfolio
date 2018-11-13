@@ -1,0 +1,44 @@
+@mixin keyframes($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
+
+@mixin screen-xs {
+  @media (min-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin screen-xlg {
+  @media (min-width: $screen-xlg) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-only {
+  @media (max-width: ($screen-sm - 1)) {
+    @content;
+  }
+}
