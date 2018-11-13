@@ -1,0 +1,18 @@
+@import './../../utils/scss/helpers.scss';
+
+.About__ctn {
+
+  display: flex;
+
+  .profile {
+    flex-basis: 50%;
+  }
+
+  .picture {
+    flex-basis: 50%;
+    width: 300px;
+    height: 350px;
+    background-color: $pink-medium;
+    margin-right: 40px;
+  }
+}

@@ -41,7 +41,7 @@ class Nav extends Component {
     const {open, pages} = this.state;
 
     return (
-      <div className='Nav__ctn'>
+      <nav className='Nav__ctn'>
 
         <Button variant='fab' color='inherit' aria-label='Menu' onClick={this.toggleDrawer(true)} >
           <Icon>chevron_right</Icon>
@@ -66,7 +66,7 @@ class Nav extends Component {
             </List>
           </div>
         </Drawer>
-      </div>
+      </nav>
     );
   }
 }

@@ -32,28 +32,13 @@
     border-left-color: #FA7F77;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
-h1 {
-  font-size: 80px;
-  margin: 0; }
-
-h2 {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 24px; }
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0; }
-
-section {
-  padding: 50px 20px; }
-  @media (min-width: 768px) {
-    section {
-      padding: 50px 70px; } }
-
-.full-height {
-  height: 100vh; }
-
-#blah {
-  background-color: #F0F0F0; }
+.About__ctn {
+  display: flex; }
+  .About__ctn .profile {
+    flex-basis: 50%; }
+  .About__ctn .picture {
+    flex-basis: 50%;
+    width: 300px;
+    height: 350px;
+    background-color: #F7A398;
+    margin-right: 40px; }

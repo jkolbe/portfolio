@@ -18,7 +18,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className='Footer__ctn'>
+      <footer className='Footer__ctn'>
         <div className='footer_icons'>
           {this.state.links.map(l => (
             <a target='_blank' href={l.link}>
@@ -27,7 +27,7 @@ class Footer extends Component {
           ))}
         </div>
         <p>© 2018 | designed and developed by Joanna Kolbe</p>
-      </div>
+      </footer>
     );
   }
 }

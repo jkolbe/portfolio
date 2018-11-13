@@ -10,16 +10,17 @@ class Home extends Component {
 
         <Hero />
 
-
-        <div id='blah' className='full-height'>
-          <h1>BLAH</h1>
-        </div>
-
         <About />
 
-        <div id='smt' className='full-height'>
+        <section id='blah' className='full-height'>
+          <h1>BLAH</h1>
+        </section>
+
+        
+
+        <section id='smt' className='full-height'>
           <h1>smt</h1>
-        </div>
+        </section>
 
       </div>
 

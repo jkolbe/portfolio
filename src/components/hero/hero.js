@@ -6,7 +6,7 @@ import './hero.css';
 class Hero extends Component {
   render() {
     return (
-      <div className="Hero__ctn" id='home'>
+      <header className="Hero__ctn" id='home'>
 
         <div className="dotted">
           <Canvas id='dotted_canvas' />
@@ -17,7 +17,7 @@ class Hero extends Component {
           <h1>Joanna Kolbe</h1>
           <p>My journey through UX</p>
         </div>
-      </div>
+      </header>
     );
   }
 }

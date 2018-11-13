@@ -5,10 +5,23 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 24px;
+}
+
 body {
   font-family: $roboto;
   margin: 0;
   padding: 0;
+}
+
+section {
+  padding: 50px 20px;
+  @include screen-sm {
+    padding: 50px 70px;
+  }
 }
 
 .full-height {
@@ -16,9 +29,9 @@ body {
 }
 
 #about {
-  background-color: $grey-light;
+  
 }
 
 #blah {
-  // background-color: $pink-light;
+  background-color: $grey-light;
 }
