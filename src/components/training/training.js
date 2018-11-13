@@ -11,13 +11,13 @@ class Training extends Component {
     this.timeline_items = null;
     this.state = {
       timeline: [
-        {time: '1934', description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'},
-        {time: '1937', description: 'Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.'},
-        {time: '1940', description: 'Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.'},
-        {time: '1943', description: 'In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.'},
-        {time: '1956', description: 'In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.'},
-        {time: '1967', description: 'Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.'},
-        {time: '2005', description: 'In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.'},
+        {title: 'University of Toronto', time: '1934', description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'},
+        {title: 'University of Toronto', time: '1937', description: 'Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.'},
+        {title: 'University of Toronto', time: '1940', description: 'Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.'},
+        {title: 'University of Toronto', time: '1943', description: 'In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.'},
+        {title: 'University of Toronto', time: '1956', description: 'In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.'},
+        {title: 'University of Toronto', time: '1967', description: 'Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.'},
+        {title: 'University of Toronto', time: '2005', description: 'In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.'},
       ]
     }
 
@@ -72,8 +72,11 @@ class Training extends Component {
             {timeline.map((t, i) => (
               <li key={`timeline${i}`}>
                 <div className='timeline_element'>
-                  <time>{t.time}</time>
-                  {t.description}
+                  <h3 className='title'>{t.title}</h3>
+                  <div className='content'>
+                    <time>{t.time}</time>
+                    {t.description}
+                  </div>
                 </div>
               </li>
             ))}

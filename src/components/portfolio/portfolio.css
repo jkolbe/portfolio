@@ -34,3 +34,21 @@
 
 .Portfolio__ctn {
   background-color: #F0F0F0; }
+  .Portfolio__ctn .portfolio_item a {
+    display: block; }
+    .Portfolio__ctn .portfolio_item a:link, .Portfolio__ctn .portfolio_item a:visited, .Portfolio__ctn .portfolio_item a:hover, .Portfolio__ctn .portfolio_item a:active {
+      color: white;
+      text-decoration: none; }
+  .Portfolio__ctn .portfolio_item figure {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    margin: 0;
+    background: #000000; }
+    .Portfolio__ctn .portfolio_item figure img {
+      width: 40%;
+      padding-right: 40px;
+      max-width: 200px; }
+    .Portfolio__ctn .portfolio_item figure figcaption {
+      width: 60%;
+      padding-left: 40px; }

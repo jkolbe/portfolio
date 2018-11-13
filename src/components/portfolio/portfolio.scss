@@ -2,4 +2,32 @@
 
 .Portfolio__ctn {
   background-color: $grey-light;
+
+  .portfolio_item {
+    a {
+      display: block;
+      &:link, &:visited, &:hover, &:active {
+        color: white;
+        text-decoration: none
+      }
+    }
+    figure {
+      display: flex;
+      align-items: center;
+      padding: 40px;
+      margin: 0;
+      background: $black;
+
+      img {
+        width: 40%;
+        padding-right: 40px;
+        max-width: 200px;
+      }
+      figcaption {
+        width: 60%;
+        padding-left: 40px;
+      }
+    }
+  }
+
 }

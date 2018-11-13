@@ -79,11 +79,18 @@
         position: relative;
         bottom: 0;
         width: 400px;
-        padding: 15px;
         background: white;
         visibility: hidden;
         opacity: 0;
         transition: all .5s ease-in-out; }
+        .Training__ctn .timeline ul li .timeline_element .title {
+          background: #333;
+          color: white;
+          font-weight: 100;
+          margin: 0;
+          padding: 8px 15px; }
+        .Training__ctn .timeline ul li .timeline_element .content {
+          padding: 15px; }
         .Training__ctn .timeline ul li .timeline_element::before {
           content: '';
           position: absolute;
