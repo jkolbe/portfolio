@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from '../components/nav/nav'
+import Footer from '../components/footer/footer'
 
 // import App from '../App';
 import Home from '../containers/home';
@@ -21,6 +22,7 @@ const Routes = () => (
         <Route path="/case-study" exact component={CaseStudy} />
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </div>
   </Router>
 )

@@ -17,6 +17,10 @@ class Home extends Component {
 
         <About />
 
+        <div id='smt' className='full-height'>
+          <h1>smt</h1>
+        </div>
+
       </div>
 
     );

@@ -33,17 +33,14 @@
     border-left-color: #FA7F77;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
-h1 {
-  font-size: 80px;
-  margin: 0; }
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0; }
-
-.full-height {
-  height: 100vh; }
-
-#about {
-  background-color: #F0F0F0; }
+.Footer__ctn {
+  text-align: center;
+  background-color: #FA7F77;
+  background-image: -webkit-linear-gradient(150deg, #F7A398 25%, #FA7F77 25%);
+  padding: 40px 16px; }
+  .Footer__ctn .footer_icons a {
+    color: black;
+    display: inline-block;
+    margin: 0 16px; }
+    .Footer__ctn .footer_icons a span {
+      overflow: visible; }

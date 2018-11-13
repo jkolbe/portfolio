@@ -1,0 +1,19 @@
+@import './../../utils/scss/helpers.scss';
+
+.Footer__ctn {
+  text-align: center;
+  background-color: $pink-dark;
+  background-image: -webkit-linear-gradient(150deg, $pink-medium 25%, $pink-dark 25%);
+  padding: 40px 16px;
+
+  .footer_icons {
+    a {
+      color: black;
+      display: inline-block;
+      margin: 0 16px;
+      span {
+        overflow: visible
+      }
+    }
+  }
+}
