@@ -2,4 +2,22 @@
   position: fixed;
   z-index: 1;
   top: 16px;
-  left: 16px; }
+  left: 16px;
+  margin-top: calc(50% - 23px); }
+
+.Drawer__ctn div[class*="MuiDrawer-paper"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.Drawer__ctn li {
+  justify-content: center;
+  padding: 8px 16px; }
+
+.Drawer__ctn a:link, .Drawer__ctn a:visited, .Drawer__ctn a:hover, .Drawer__ctn a:active {
+  text-decoration: none;
+  padding: 8px; }
+  .Drawer__ctn a:link > div, .Drawer__ctn a:visited > div, .Drawer__ctn a:hover > div, .Drawer__ctn a:active > div {
+    padding: 0; }
+  .Drawer__ctn a:link span, .Drawer__ctn a:visited span, .Drawer__ctn a:hover span, .Drawer__ctn a:active span {
+    font-size: 24px; }

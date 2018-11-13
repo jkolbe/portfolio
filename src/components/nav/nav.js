@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import {withRouter, BrowserRouter as Link } from "react-router-dom";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // import { browserHistory } from 'react-router'
 // browserHistory.push('/path/some/where')
@@ -23,7 +24,12 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: true
+      open: false,
+      pages: [
+        {text: 'Home', href: 'home'},
+        {text: 'Blah', href: 'blah'},
+        {text: 'About Me', href: 'about'},
+      ]
     };
   }
 
@@ -31,38 +37,17 @@ class Nav extends Component {
     this.setState({ open });
   };
 
-  handleLinkClick = () => {
-    // console.log(this.props)
-    // this.props.history.push("/training");
-
-    const elem = document.getElementById("about");
-    const bodyRect = document.body.getBoundingClientRect();
-    const elemRect = elem.getBoundingClientRect();
-    const offset = elemRect.top - bodyRect.top;
-
-
-    // console.log('offset', offset)
-    setTimeout(() => {
-      window.scrollTo(0, offset);
-    }, 0);
-
-    // elmnt.scrollIntoView(true);
-    // console.log(elmnt)
-
-  }
-
-
   render() {
-    const {open} = this.state;
+    const {open, pages} = this.state;
 
     return (
       <div className='Nav__ctn'>
 
         <Button variant='fab' color='inherit' aria-label='Menu' onClick={this.toggleDrawer(true)} >
-          <Icon>menu</Icon>
+          <Icon>chevron_right</Icon>
         </Button>
 
-        <Drawer open={open} onClose={this.toggleDrawer(false)}>
+        <Drawer className='Drawer__ctn' open={open} onClose={this.toggleDrawer(false)}>
           <div
             tabIndex={0}
             role="button"
@@ -70,10 +55,12 @@ class Nav extends Component {
             onKeyDown={this.toggleDrawer(false)}
           >
             <List>
-              {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                <ListItem button key={text} onClick={this.handleLinkClick}>
-                  <ListItemIcon><Icon>star</Icon></ListItemIcon>
-                  <ListItemText primary={text} />
+              {pages.map(p => (
+                <ListItem key={p.href}>
+                  <AnchorLink className='draw' href={`#${p.href}`}>
+                    <ListItemText primary={p.text} />
+                  </AnchorLink>
+
                 </ListItem>
               ))}
             </List>

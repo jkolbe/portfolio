@@ -6,7 +6,7 @@ import './hero.css';
 class Hero extends Component {
   render() {
     return (
-      <div className="Hero__ctn">
+      <div className="Hero__ctn" id='home'>
 
         <div className="dotted">
           <Canvas id='dotted_canvas' />

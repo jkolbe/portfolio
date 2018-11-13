@@ -3,4 +3,33 @@
   z-index: 1;
   top: 16px;
   left: 16px;
+  margin-top: calc(50% - 23px);
 }
+
+.Drawer__ctn {
+
+  div[class*="MuiDrawer-paper"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  li {
+    justify-content: center;
+    padding: 8px 16px;
+  }
+
+  a {
+    &:link, &:visited, &:hover, &:active {
+      text-decoration: none;
+      padding: 8px;
+      & > div {padding: 0;}
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+
+}
+
+
