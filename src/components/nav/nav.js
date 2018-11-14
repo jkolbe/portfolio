@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {withRouter } from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import Button from '@material-ui/core/Button';
@@ -17,6 +17,7 @@ class Nav extends Component {
     super(props);
     this.state = {
       open: false,
+      homePage: !(props.location.pathname.includes("case-study")),
       pages: [
         {text: 'Home', href: 'home'},
         {text: 'About Me', href: 'about'},
@@ -27,7 +28,11 @@ class Nav extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot){
-    console.log('this.props', this.props)
+    if(this.props.location.pathname !== prevProps.location.pathname) {
+      this.setState({
+        homePage: !(this.props.location.pathname.includes("case-study"))
+      })
+    }
   }
 
   toggleDrawer = (open) => () => {
@@ -35,7 +40,8 @@ class Nav extends Component {
   };
 
   render() {
-    const {open, pages} = this.state;
+    const {open, pages, homePage} = this.state;
+    console.log('homePage', homePage)
 
     return (
       <nav className='Nav__ctn'>
@@ -52,14 +58,19 @@ class Nav extends Component {
             onKeyDown={this.toggleDrawer(false)}
           >
             <List>
-              {pages.map(p => (
+              {homePage && pages.map(p => (
                 <ListItem key={p.href}>
                   <AnchorLink className='draw' href={`#${p.href}`}>
                     <ListItemText primary={p.text} />
                   </AnchorLink>
-
                 </ListItem>
               ))}
+              {!homePage && <ListItem>
+                  <Link className='draw' to="/">
+                    <ListItemText primary='Back' />
+                  </Link>
+                </ListItem>
+              }
             </List>
           </div>
         </Drawer>
