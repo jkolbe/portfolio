@@ -8,7 +8,10 @@ class Portfolio extends Component {
     super();
     this.state = {
       portfolio: [
-        {id: 1, title: 'Connecting Users to Local Events', 'description': 'In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.'},
+        {
+          id: 1,
+          title: 'Connecting Users to Local Events',
+          'description': 'Raising the awareness and promotion of local events. Informing users about what’s happening in their neighbourhood so they would never feel like they’re missing out.'},
       ]
     }
   }

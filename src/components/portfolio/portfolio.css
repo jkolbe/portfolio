@@ -46,9 +46,13 @@
     margin: 0;
     background: #333; }
     .Portfolio__ctn .portfolio_item figure img {
-      width: 40%;
-      padding-right: 40px;
-      max-width: 200px; }
+      width: 45%;
+      padding-right: 40px; }
     .Portfolio__ctn .portfolio_item figure figcaption {
-      width: 60%;
+      width: 55%;
       padding-left: 40px; }
+      .Portfolio__ctn .portfolio_item figure figcaption h3 {
+        text-transform: uppercase;
+        margin: 0 0 24px 0; }
+      .Portfolio__ctn .portfolio_item figure figcaption p {
+        line-height: 1.4; }

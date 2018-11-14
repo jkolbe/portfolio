@@ -8,7 +8,9 @@ class About extends Component {
         <div className='picture'></div>
         <div className='profile'>
           <h2>About me</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Hi! I'm Joana, a UX/UI developer based in Toronto and a student of Information program at University of Toronto.
+          I am committed to building high quality, functional, and user-friendly experience that empowers its users,
+          and makes it easier for them to achieve their goals.</p>
         </div>
       </section>
     );

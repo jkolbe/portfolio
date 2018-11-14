@@ -3,6 +3,7 @@
 .About__ctn {
 
   display: flex;
+  align-items: center;
 
   .profile {
     flex-basis: 50%;
@@ -16,4 +17,9 @@
     // background-color: $pink-medium;
     margin-right: 40px;
   }
+
+  p {
+    line-height: 1.4;
+  }
+
 }
