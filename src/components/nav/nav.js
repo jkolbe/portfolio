@@ -41,7 +41,6 @@ class Nav extends Component {
 
   render() {
     const {open, pages, homePage} = this.state;
-    console.log('homePage', homePage)
 
     return (
       <nav className='Nav__ctn'>
