@@ -14,7 +14,7 @@ class Training extends Component {
         {
           organization: 'Rogers Communications Inc.',
           title: 'Sr. UI/UX Developer',
-          time: 'Nov. 2018 - present',
+          time: 'Nov. 2018 - Present',
           points: [
             'Design and develop user interfaces',
             'Build and integrate consistent, efficient components across the product portfolio',
