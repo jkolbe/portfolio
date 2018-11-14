@@ -2,8 +2,11 @@
   position: fixed;
   z-index: 1;
   top: 16px;
-  left: 16px;
-  margin-top: calc(50% - 23px); }
+  left: -32px;
+  margin-top: calc(50vh - 23px); }
+  .Nav__ctn .material-icons {
+    position: relative;
+    right: -14px; }
 
 .Drawer__ctn div[class*="MuiDrawer-paper"] {
   display: flex;

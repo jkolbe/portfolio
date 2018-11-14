@@ -4,14 +4,13 @@
   background-color: $pink-medium;
 
   .timeline {
-    ul {
+    .timeline_list {
       padding: 0; margin: 0;
-      li {
+      .timeline_item {
         list-style-type: none;
         position: relative;
         width: 2px;
         margin: 0 auto;
-        padding-top: 50px;
         background: white;
 
         &::after {
@@ -66,13 +65,12 @@
           position: relative;
           bottom: 0;
           width: 400px;
-          
           background: white;
           visibility: hidden;
           opacity: 0;
           transition: all .5s ease-in-out;
 
-          .title {
+          .organization {
             background: #333;
             color: white;
             font-weight: 100;
@@ -81,6 +79,23 @@
           }
           .content {
             padding: 15px;
+            time {
+              color: #888;
+              font-size: 14px;
+            }
+            p {
+              margin: 0;
+            }
+            .title {
+              color: darken($pink-dark, 5%);
+              font-weight: bold;
+            }
+            .description {
+              font-size: 14px;
+              margin-top: 8px;
+              padding-left: 18px;
+              list-style-type: disc;
+            }
           }
 
           &::before {
@@ -101,9 +116,10 @@
 
   @media screen and (max-width: 1000px) {
     .timeline {
-      ul {
-        li {
+      .timeline_list {
+        .timeline_item {
           margin-left: 20px;
+          padding-top: 20px;
           .timeline_element {
             width: calc(100vw - 130px);
           }

@@ -2,8 +2,13 @@
   position: fixed;
   z-index: 1;
   top: 16px;
-  left: 16px;
-  margin-top: calc(50% - 23px);
+  // left: 16px;
+  left:-32px;
+  margin-top: calc(50vh - 23px);
+  .material-icons {
+    position: relative;
+    right: -14px;
+  }
 }
 
 .Drawer__ctn {
