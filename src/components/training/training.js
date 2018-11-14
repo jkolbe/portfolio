@@ -131,7 +131,6 @@ class Training extends Component {
   }
 
   animateTimeline = () => {
-    console.log(this.timeline_items)
     for (var i = 0; i < this.timeline_items.length; i++) {
       if (this.isElementInViewport(this.timeline_items[i])) {
         this.timeline_items[i].classList.add("in-view");
@@ -165,8 +164,7 @@ class Training extends Component {
                     <p className='title'>{t.title}</p>
                     <time>{t.time}</time>
                     {t.points && <ul className='description'>
-
-                      {t.points.map(p => (<li>{p}</li>))}
+                      {t.points.map((p, j) => (<li key={`timeline${i}-${j}`}>{p}</li>))}
                     </ul>}
                   </div>
                 </div>

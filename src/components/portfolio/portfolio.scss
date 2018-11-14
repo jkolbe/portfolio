@@ -17,14 +17,25 @@
       padding: 40px;
       margin: 0;
       background: $black;
+      @include screen-mobile-only {
+        flex-direction: column;
+      }
 
       img {
-        width: 45%;
-        padding-right: 40px;
+        width: 100%;
+        @include screen-sm {
+          width: 45%;
+          padding-right: 40px;
+        }
       }
       figcaption {
-        width: 55%;
-        padding-left: 40px;
+        @include screen-sm {
+          width: 55%;
+          padding-left: 40px;
+        }
+        @include screen-mobile-only {
+          margin-top: 24px;
+        }
         h3 {
           text-transform: uppercase;
           margin: 0 0 24px 0;

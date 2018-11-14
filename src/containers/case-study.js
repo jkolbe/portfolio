@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class CaseStudy extends Component {
   render() {
     return (
-      <div>Case Study</div>
+      <div className='full-height'>Case Study</div>
     );
   }
 }

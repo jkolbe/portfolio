@@ -5,8 +5,15 @@
   display: flex;
   align-items: center;
 
+  @include screen-mobile-only {
+    flex-direction: column;
+  }
+
   .profile {
     flex-basis: 50%;
+    @include screen-mobile-only {
+      order: 1;
+    }
   }
 
   .picture {
@@ -16,6 +23,11 @@
     border: 2px solid black;
     // background-color: $pink-medium;
     margin-right: 40px;
+    @include screen-mobile-only {
+      width: 100%;
+      margin: 0;
+       order: 2;
+    }
   }
 
   p {

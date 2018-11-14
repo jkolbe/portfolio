@@ -26,6 +26,10 @@ class Nav extends Component {
     };
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot){
+    console.log('this.props', this.props)
+  }
+
   toggleDrawer = (open) => () => {
     this.setState({ open });
   };
