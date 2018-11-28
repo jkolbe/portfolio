@@ -45,6 +45,9 @@
     .Case_Study__ctn section .section_split > div:last-child {
       margin-left: 16px; }
 
+.Case_Study__ctn section li {
+  margin-bottom: 8px; }
+
 .Case_Study__ctn .header {
   background-color: #333;
   color: white;
