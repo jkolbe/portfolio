@@ -6,6 +6,7 @@ import PieChart from '../components/chart/pie';
 import BarChart from '../components/chart/bar';
 import EmpathyMap from '../components/empathy-map/map';
 import AsIsScenario from '../components/scenario/as-is';
+import Needs from '../components/needs/needs';
 
 import events from './../utils/images/events.png';
 import competitors from './../utils/images/competitors.png';
@@ -92,6 +93,7 @@ class CaseStudy extends Component {
           by making them more accessible to the public. The product informs users about what is
           happening in their neighbourhood so they would never feel like they're missing out.
           Users can search for a specific event or browse for events that match their preference criteria. {appName} is a centralized application that combines events from all existing platforms.</p>
+          <p><strong>Project team:</strong> Joanna Kolbe | Tiana Guido | Ifrah Yousuf | Steve Yoon</p>
         </section>
 
         <section className='competitors'>
@@ -202,6 +204,7 @@ class CaseStudy extends Component {
 
         <section className='needs'>
           <h2>Need Statements</h2>
+          <Needs />
         </section>
 
         <section className='ideas'>

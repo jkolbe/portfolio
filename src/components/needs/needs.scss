@@ -1,0 +1,29 @@
+@import './../../utils/scss/helpers.scss';
+
+.Needs__ctn {
+
+	display: flex;
+	align-items: center;
+
+	.user {
+		margin-right: 24px;
+		img {
+			max-width: 120px;
+		}
+	}
+
+	.need {
+		margin-bottom: 8px;
+		background-color: $grey-light;
+		padding: 8px;
+		border-radius: 8px 8px 8px 0px;
+		p {margin: 0;}
+
+		.template {
+			color: #888;
+    		text-decoration: underline;
+		}
+		.content {
+		}
+	}
+}

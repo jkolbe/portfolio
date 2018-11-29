@@ -130,7 +130,7 @@ class AsIsScenario extends Component {
     return (
       <div className='Scenario__ctn'>
         <ScenarioTable data={data} labels={labels} columns={columns} />
-        <p class='legend'>* - main pain points</p>
+        <p className='legend'>* - main pain points</p>
       </div>
     );
   }

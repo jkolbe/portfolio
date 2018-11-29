@@ -1,0 +1,51 @@
+.draw {
+  box-sizing: border-box;
+  transition: color 0.25s;
+  position: relative;
+  vertical-align: middle; }
+  .draw::before, .draw::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+  .draw::before {
+    top: 0;
+    left: 0; }
+  .draw::after {
+    bottom: 0;
+    right: 0; }
+  .draw:hover {
+    color: #FA7F77; }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%; }
+  .draw:hover::before {
+    border-top-color: #FA7F77;
+    border-right-color: #FA7F77;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .draw:hover::after {
+    border-bottom-color: #FA7F77;
+    border-left-color: #FA7F77;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+.Needs__ctn {
+  display: flex;
+  align-items: center; }
+  .Needs__ctn .user {
+    margin-right: 24px; }
+    .Needs__ctn .user img {
+      max-width: 120px; }
+  .Needs__ctn .need {
+    margin-bottom: 8px;
+    background-color: #F0F0F0;
+    padding: 8px;
+    border-radius: 8px 8px 8px 0px; }
+    .Needs__ctn .need p {
+      margin: 0; }
+    .Needs__ctn .need .template {
+      color: #888;
+      text-decoration: underline; }
