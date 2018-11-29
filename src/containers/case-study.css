@@ -71,3 +71,7 @@
 
 .Case_Study__ctn .persona {
   background-color: #F0F0F0; }
+
+.Case_Study__ctn .diagrams {
+  display: flex;
+  flex-wrap: wrap; }
