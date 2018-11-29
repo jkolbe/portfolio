@@ -10,17 +10,37 @@
     .section_split {
       display: flex;
       align-items: center;
-      & > div {
-        &:first-child {
-          margin-right: 16px;
+      .graphic {
+        display: none;
+        text-align: center;
+        img {
+          max-height: 500px;
+          margin: 0 auto;
         }
-        &:last-child {
-          margin-left: 16px;
+      }
+      @include screen-sm {
+        .graphic { display: block; }
+        & > div {
+          &:first-child {
+            margin-right: 16px;
+          }
+          &:last-child {
+            margin-left: 16px;
+          }
+          width: 50%;
         }
-        width: 50%;
       }
     }
-    li {
+    .list {
+      p {
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+      ul {
+        margin-top: 8px;
+      }
+    }
+    .list-separated li {
       margin-bottom: 8px;
     }
   }
@@ -54,11 +74,11 @@
     
   }
 
-  .competitors {
+  .competitors, .as-is {
     background-color: $pink-light;
   }
 
-  .persona {
+  .persona, .ideas {
     background-color: $grey-light;
   }
 

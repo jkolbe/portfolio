@@ -1,0 +1,85 @@
+.draw {
+  box-sizing: border-box;
+  transition: color 0.25s;
+  position: relative;
+  vertical-align: middle; }
+  .draw::before, .draw::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+  .draw::before {
+    top: 0;
+    left: 0; }
+  .draw::after {
+    bottom: 0;
+    right: 0; }
+  .draw:hover {
+    color: #FA7F77; }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%; }
+  .draw:hover::before {
+    border-top-color: #FA7F77;
+    border-right-color: #FA7F77;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .draw:hover::after {
+    border-bottom-color: #FA7F77;
+    border-left-color: #FA7F77;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+.Empathy__ctn {
+  margin-top: 32px;
+  display: flex; }
+  @media (max-width: 767px) {
+    .Empathy__ctn {
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch; } }
+  .Empathy__ctn .tile__ctn, .Empathy__ctn .user__ctn {
+    display: flex;
+    flex-direction: column; }
+  .Empathy__ctn .tile__ctn {
+    justify-content: flex-start; }
+    .Empathy__ctn .tile__ctn .tile:first-child {
+      margin-bottom: 24px; }
+    @media (min-width: 768px) {
+      .Empathy__ctn .tile__ctn {
+        width: 40%; } }
+  .Empathy__ctn .user__ctn {
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .Empathy__ctn .user__ctn {
+        display: none; } }
+    @media (min-width: 768px) {
+      .Empathy__ctn .user__ctn {
+        width: 20%; } }
+  .Empathy__ctn .user {
+    background-color: #F0F0F0;
+    margin: 0 16px; }
+    .Empathy__ctn .user p {
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+      padding: 4px 0 8px; }
+  .Empathy__ctn .tile {
+    border: 1px solid #333; }
+    @media (min-width: 768px) {
+      .Empathy__ctn .tile {
+        height: 50%; } }
+    @media (max-width: 767px) {
+      .Empathy__ctn .tile {
+        margin-bottom: 16px !important; } }
+    .Empathy__ctn .tile .tile-title {
+      background-color: #333;
+      color: #ffffff;
+      padding: 8px; }
+    .Empathy__ctn .tile .tile-body {
+      padding: 16px; }
+      .Empathy__ctn .tile .tile-body ul {
+        margin: 0; }
