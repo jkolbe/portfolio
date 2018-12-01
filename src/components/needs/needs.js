@@ -39,7 +39,7 @@ class Needs extends Component {
         </div>
         <div className='needs'>
           {needs.map((n, i) => (
-            <div key={`need-${i}`} class="need">
+            <div key={`need-${i}`} className="need">
               <p><span className='template'>I need a way to</span> <span className='content'>{n.need}</span> <span className='template'>so that</span> <span className='content'>{n.reason}.</span></p>
             </div>
           ))}

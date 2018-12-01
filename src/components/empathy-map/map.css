@@ -58,28 +58,31 @@
         display: none; } }
     @media (min-width: 768px) {
       .Empathy__ctn .user__ctn {
-        width: 20%; } }
+        width: 20%;
+        padding: 16px; } }
   .Empathy__ctn .user {
-    background-color: #F0F0F0;
     margin: 0 16px; }
+    .Empathy__ctn .user img {
+      border: 1px solid #ccc;
+      border-radius: 50%; }
     .Empathy__ctn .user p {
       margin: 0;
       text-align: center;
       font-size: 14px;
       padding: 4px 0 8px; }
-  .Empathy__ctn .tile {
-    border: 1px solid #333; }
-    @media (min-width: 768px) {
-      .Empathy__ctn .tile {
-        height: 50%; } }
-    @media (max-width: 767px) {
-      .Empathy__ctn .tile {
-        margin-bottom: 16px !important; } }
-    .Empathy__ctn .tile .tile-title {
-      background-color: #333;
-      color: #ffffff;
-      padding: 8px; }
-    .Empathy__ctn .tile .tile-body {
-      padding: 16px; }
-      .Empathy__ctn .tile .tile-body ul {
-        margin: 0; }
+  @media (min-width: 768px) {
+    .Empathy__ctn .tile {
+      height: 50%; } }
+  @media (max-width: 767px) {
+    .Empathy__ctn .tile {
+      margin-bottom: 16px !important; } }
+  .Empathy__ctn .tile .tile-title {
+    margin: 0;
+    background-color: #ccc;
+    padding: 8px;
+    border-radius: 4px 4px 0 0; }
+  .Empathy__ctn .tile .tile-body {
+    border: 1px solid #ccc;
+    padding: 16px; }
+    .Empathy__ctn .tile .tile-body ul {
+      margin: 0; }

@@ -7,6 +7,7 @@ import BarChart from '../components/chart/bar';
 import EmpathyMap from '../components/empathy-map/map';
 import AsIsScenario from '../components/scenario/as-is';
 import Needs from '../components/needs/needs';
+import Persona from '../components/persona/persona';
 
 import events from './../utils/images/events.png';
 import competitors from './../utils/images/competitors.png';
@@ -161,7 +162,9 @@ class CaseStudy extends Component {
 
         <section className='persona'>
           <h2>Persona</h2>
-          <div className='section_split'>
+          <p>Based on data gathered through primary research, we were able to develop a user profile to guide us through the rest of our product journey. Our persona, Emma Brown, represents usage patterns, key behaviour, attributes, motivations, and goals of a prospective user.</p>
+          <Persona />
+          {/*<div className='section_split'>
             <div className='content'>
               <p>Based on data gathered through primary research, we were able to develop a user profile to guide us through the rest of our product journey. Our persona, Emma Brown, represents usage patterns, key behaviour, attributes, motivations, and goals of a prospective user.</p>
               <p><strong>Emma Brown</strong> is a 25 years old student who lives in Toronto and wants to find something to do in her spare time. She finds it difficult to search on multiple outlets for events that match her interests. She would like to be more involve in the community and find events more efficiently.</p>
@@ -187,7 +190,7 @@ class CaseStudy extends Component {
             <div className='graphic'>
               <img src={emma} alt="Emma Brown" />
             </div>
-          </div>
+          </div> */}
         </section>
 
         <section className='empathy'>

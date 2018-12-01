@@ -35,12 +35,16 @@
 		}
 		@include screen-sm {
 			width: 20%;
+			padding: 16px;
 		}
 	}
 
 	.user {
-		background-color: $grey-light;
 		margin: 0 16px;
+		img {
+			border: 1px solid $grey-medium;
+			border-radius: 50%;
+		}
 		p {
 			margin: 0;
     		text-align: center;
@@ -50,7 +54,6 @@
 	}
 
 	.tile {
-		border: 1px solid $black;
 		@include screen-sm {
 			height: 50%;	
 		}
@@ -58,11 +61,13 @@
 			margin-bottom: 16px !important;	
 		}
 		.tile-title {
-			background-color: $black;
-			color: $white;
+			margin: 0;
+			background-color: $grey-medium;
 			padding: 8px;
+			border-radius: 4px 4px 0 0;
 		}
 		.tile-body {
+			border: 1px solid $grey-medium;
 			padding: 16px;
 			ul {
 				margin: 0;

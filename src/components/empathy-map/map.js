@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-import emma from './../../utils/images/emma-brown.png';
-
+import emmacirc from './../../utils/images/emma-circle.png';
 import './map.css'
 
 class EmpathyMap extends Component {
@@ -36,7 +34,7 @@ class EmpathyMap extends Component {
 	    </div>
 	    <div className='user__ctn'>
 	        <div className='user'>
-	        	<img src={emma} alt="Emma Brown" />
+	        	<img src={emmacirc} alt="Emma Brown" />
 	        	<p>Emma Brown<br/>25 years old<br/>Student</p>
 	        </div>
 	    </div>
