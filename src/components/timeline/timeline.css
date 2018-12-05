@@ -1,0 +1,139 @@
+.draw {
+  box-sizing: border-box;
+  transition: color 0.25s;
+  position: relative;
+  vertical-align: middle; }
+  .draw::before, .draw::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+  .draw::before {
+    top: 0;
+    left: 0; }
+  .draw::after {
+    bottom: 0;
+    right: 0; }
+  .draw:hover {
+    color: #FA7F77; }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%; }
+  .draw:hover::before {
+    border-top-color: #FA7F77;
+    border-right-color: #FA7F77;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .draw:hover::after {
+    border-bottom-color: #FA7F77;
+    border-left-color: #FA7F77;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+.Timeline__ctn .timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative; }
+  .Timeline__ctn .timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+    background-color: #ffffff;
+    left: 50%;
+    margin-left: -1px; }
+  .Timeline__ctn .timeline > li {
+    margin-bottom: 20px;
+    position: relative; }
+    .Timeline__ctn .timeline > li:before, .Timeline__ctn .timeline > li:after {
+      content: " ";
+      display: table; }
+    .Timeline__ctn .timeline > li:after {
+      clear: both; }
+    .Timeline__ctn .timeline > li:nth-child(even) .timeline-panel {
+      transform: translate3d(200px, 0, 0);
+      float: right; }
+      .Timeline__ctn .timeline > li:nth-child(even) .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 8px;
+        left: -8px;
+        right: auto; }
+    .Timeline__ctn .timeline > li:last-child {
+      margin-bottom: 0; }
+    .Timeline__ctn .timeline > li.in-view .timeline-panel {
+      transform: none !important;
+      visibility: visible;
+      opacity: 1; }
+    .Timeline__ctn .timeline > li.in-view .timeline-badge {
+      background-color: #FA7F77; }
+  .Timeline__ctn .timeline .timeline-panel {
+    transform: translate3d(-200px, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    width: 46%;
+    float: left;
+    position: relative; }
+    .Timeline__ctn .timeline .timeline-panel:after {
+      position: absolute;
+      top: 8px;
+      right: -8px;
+      display: inline-block;
+      border-top: 8px solid transparent;
+      border-left: 8px solid #333;
+      border-right: 0 solid #333;
+      border-bottom: 8px solid transparent;
+      content: " "; }
+  .Timeline__ctn .timeline .timeline-badge {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: all .5s ease-in-out; }
+
+.Timeline__ctn .timeline-panel {
+  background-color: #ffffff; }
+  .Timeline__ctn .timeline-panel .organization {
+    background: #333;
+    color: white;
+    font-weight: 100;
+    margin: 0;
+    padding: 8px 15px; }
+  .Timeline__ctn .timeline-panel .timeline-body {
+    padding: 15px; }
+    .Timeline__ctn .timeline-panel .timeline-body .title {
+      color: #f9685e;
+      font-weight: bold; }
+    .Timeline__ctn .timeline-panel .timeline-body time {
+      color: #888;
+      font-size: 14px; }
+    .Timeline__ctn .timeline-panel .timeline-body p {
+      margin: 0; }
+    .Timeline__ctn .timeline-panel .timeline-body .description {
+      font-size: 14px;
+      margin-top: 8px;
+      padding-left: 18px;
+      list-style-type: disc; }
+
+@media (max-width: 767px) {
+  .Timeline__ctn .timeline:before {
+    left: 40px; }
+  .Timeline__ctn .timeline > li .timeline-panel {
+    float: right;
+    width: calc(100% - 90px); }
+    .Timeline__ctn .timeline > li .timeline-panel:after {
+      border-left-width: 0;
+      border-right-width: 8px;
+      left: -8px;
+      right: auto; }
+  .Timeline__ctn .timeline > li .timeline-badge {
+    left: 32px;
+    margin-left: 0;
+    top: 8px; } }

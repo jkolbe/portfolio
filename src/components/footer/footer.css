@@ -36,7 +36,10 @@
   text-align: center;
   background-color: #FA7F77;
   background-image: -webkit-linear-gradient(150deg, #F7A398 25%, #FA7F77 25%);
-  padding: 40px 16px; }
+  padding: 20px 0px; }
+  .Footer__ctn p {
+    margin-bottom: 0;
+    margin-top: 16px; }
   .Footer__ctn .footer_icons a {
     color: #333;
     display: inline-block;

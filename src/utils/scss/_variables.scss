@@ -16,10 +16,8 @@ $white: #ffffff;
 $parisienne: 'Parisienne', cursive;
 $roboto: 'Roboto', sans-serif;
 
-// SCREEN
-$screen-xs: 360px;
-$screen-sm: 768px;
-$screen-xs-max: ($screen-sm - 1) !default;
-$screen-md: 992px;
-$screen-lg: 1200px;
-$screen-xlg: 1400px;
+// Screen Sizes
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

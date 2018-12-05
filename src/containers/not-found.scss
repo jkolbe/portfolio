@@ -1,0 +1,18 @@
+@import './../utils/scss/helpers.scss';
+
+.Not_Found__ctn {
+	height: 100vh;
+	background-color: #222;
+	display: flex;
+ 	justify-content: center;
+  	text-align: center;
+  	align-items: center;
+  	color: $white;
+	.dotted {
+	    position: absolute;
+	    top: 0; left: 0; right: 0; bottom: 0;
+	}
+	 h1 {
+    	font-family: $parisienne;
+  	}
+}

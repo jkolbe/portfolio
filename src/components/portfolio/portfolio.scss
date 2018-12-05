@@ -4,6 +4,7 @@
   background-color: $grey-light;
 
   .portfolio_item {
+    margin-top: 16px;
     a {
       display: block;
       &:link, &:visited, &:hover, &:active {

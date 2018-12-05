@@ -32,20 +32,19 @@
     border-left-color: #FA7F77;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
-.Needs__ctn {
+.Not_Found__ctn {
+  height: 100vh;
+  background-color: #222;
   display: flex;
-  align-items: center; }
-  .Needs__ctn .user {
-    margin-right: 24px; }
-    .Needs__ctn .user img {
-      max-width: 120px; }
-  .Needs__ctn .need {
-    margin-bottom: 8px;
-    background-color: #F0F0F0;
-    padding: 8px;
-    border-radius: 8px 8px 8px 0px; }
-    .Needs__ctn .need p {
-      margin: 0; }
-    .Needs__ctn .need .template {
-      color: #888;
-      text-decoration: underline; }
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #ffffff; }
+  .Not_Found__ctn .dotted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .Not_Found__ctn h1 {
+    font-family: "Parisienne", cursive; }

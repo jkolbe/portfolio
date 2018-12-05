@@ -12,11 +12,21 @@ class Hero extends Component {
           <Canvas id='dotted_canvas' />
         </div>
 
-        <div className="hero">
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col'>
+              <p>UX. CODE. </p>
+              <h1>Joanna Kolbe</h1>
+              <p>My journey through UX</p>
+            </div>
+          </div> 
+        </div>
+
+        { /*<div className="hero">
           <p>UX. CODE. </p>
           <h1>Joanna Kolbe</h1>
           <p>My journey through UX</p>
-        </div>
+        </div> */ }
       </header>
     );
   }

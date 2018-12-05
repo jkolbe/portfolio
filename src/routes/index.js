@@ -5,7 +5,6 @@ import Nav from '../components/nav/nav'
 import Footer from '../components/footer/footer'
 
 import Home from '../containers/home';
-import CaseStudy from '../containers/case-study'
 import EventHunter from '../containers/case-study/event-hunter'
 import NotFound from '../containers/notFound'
 
@@ -15,7 +14,6 @@ const Routes = () => (
       <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/case-study/old" exact component={CaseStudy} />
         <Route path="/case-study/event-hunter" exact component={EventHunter} />
         <Route component={NotFound} />
       </Switch>

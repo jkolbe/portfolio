@@ -19,14 +19,20 @@ class Footer extends Component {
   render() {
     return (
       <footer className='Footer__ctn'>
-        <div className='footer_icons'>
-          {this.state.links.map(l => (
-            <a target='_blank' rel='noopener noreferrer' href={l.link} key={l.link}>
-              <Icon fontSize='large' className={l.icon} />
-            </a>
-          ))}
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <div className='footer_icons'>
+                {this.state.links.map(l => (
+                  <a target='_blank' rel='noopener noreferrer' href={l.link} key={l.link}>
+                    <Icon fontSize='large' className={l.icon} />
+                  </a>
+                ))}
+              </div>
+              <p>© 2018 | designed and developed by Joanna Kolbe</p>
+            </div>
+          </div>
         </div>
-        <p>© 2018 | designed and developed by Joanna Kolbe</p>
       </footer>
     );
   }

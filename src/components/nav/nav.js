@@ -17,7 +17,7 @@ class Nav extends Component {
     super(props);
     this.state = {
       open: false,
-      homePage: !(props.location.pathname.includes("case-study")),
+      homePage: props.location.pathname === '/',
       pages: [
         {text: 'Home', href: 'home'},
         {text: 'About Me', href: 'about'},

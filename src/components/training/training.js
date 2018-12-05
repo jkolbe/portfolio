@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './training.css'
-
-// https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528
+import Timeline from './../timeline/timeline'
 
 class Training extends Component {
 
@@ -153,24 +152,13 @@ class Training extends Component {
 
     return (
       <section id='training' className='Training__ctn'>
-        <h2>TRAINING</h2>
-        <div className='timeline'>
-          <ul className='timeline_list'>
-            {timeline.map((t, i) => (
-              <li className='timeline_item' key={`timeline${i}`}>
-                <div className='timeline_element'>
-                  <h3 className='organization'>{t.organization}</h3>
-                  <div className='content'>
-                    <p className='title'>{t.title}</p>
-                    <time>{t.time}</time>
-                    {t.points && <ul className='description'>
-                      {t.points.map((p, j) => (<li key={`timeline${i}-${j}`}>{p}</li>))}
-                    </ul>}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <h2>TRAINING</h2>
+              <Timeline data={timeline} />
+            </div>
+          </div>
         </div>
       </section>
     );

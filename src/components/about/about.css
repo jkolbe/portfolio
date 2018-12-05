@@ -31,28 +31,3 @@
     border-bottom-color: #FA7F77;
     border-left-color: #FA7F77;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
-
-.About__ctn {
-  display: flex;
-  align-items: center; }
-  @media (max-width: 767px) {
-    .About__ctn {
-      flex-direction: column; } }
-  .About__ctn .profile {
-    flex-basis: 50%; }
-    @media (max-width: 767px) {
-      .About__ctn .profile {
-        order: 1; } }
-  .About__ctn .picture {
-    flex-basis: 50%;
-    width: 300px;
-    height: 350px;
-    border: 2px solid black;
-    margin-right: 40px; }
-    @media (max-width: 767px) {
-      .About__ctn .picture {
-        width: 100%;
-        margin: 0;
-        order: 2; } }
-  .About__ctn p {
-    line-height: 1.4; }

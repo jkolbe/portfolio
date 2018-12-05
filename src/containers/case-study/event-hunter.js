@@ -8,13 +8,15 @@ import projectRundown from './../../utils/images/project-rundown.jpg';
 import problemStatement from './../../utils/images/problem-statement.jpg';
 import businessUserAssumptions from './../../utils/images/business-user-assumptions.jpg';
 import secondaryResearch from './../../utils/images/secondary-research.jpg';
-
 import surveyCut from './../../utils/images/survey-cut.jpg';
 import surveyFull from './../../utils/images/survey-full.jpg';
-
 import interviewCut from './../../utils/images/interview-cut.jpg';
 import interviewFull from './../../utils/images/interview-full.jpg';
 import affinityDiagram from './../../utils/images/affinity-diagram.png';
+
+import persona from './../../utils/images/persona.jpg';
+import empathyMap from './../../utils/images/empathy-map.jpg';
+import asIsScenario from './../../utils/images/as-is-scenario.jpg';
 
 import './event-hunter.css'
 
@@ -26,6 +28,7 @@ class EventHunter extends Component {
     		steps: ['Research.', 'Analysis.', 'Design.', 'Evaluation.'],
     		modalActive: false,
     		image: null,
+    		imageAlt: '',
     		imageSet1: [
     			{
     				src: projectRundown,
@@ -64,6 +67,23 @@ class EventHunter extends Component {
     				fullsrc: affinityDiagram,
     				alt: 'Affinity Diagram'
     			},
+    		],
+    		imageSet3: [
+    			{
+    				src: persona,
+    				fullsrc: persona,
+    				alt: 'Persona'
+    			},
+    			{
+    				src: empathyMap,
+    				fullsrc: empathyMap,
+    				alt: 'Empathy Map'
+    			},
+    			{
+    				src: asIsScenario,
+    				fullsrc: asIsScenario,
+    				alt: 'As-Is Scenario'
+    			},
     		]
     	};
 	}
@@ -72,15 +92,16 @@ class EventHunter extends Component {
 		this.setState({modalActive:false})
 	}
 
-	imageClick = (src) => {
+	imageClick = (src, alt) => {
 		this.setState({
 			modalActive:true,
-			image: src
+			image: src,
+			imageAlt: alt
 		})
 	}
 
 	render() {
-		const {steps, modalActive, image, imageSet1, imageSet2} = this.state;
+		const {steps, modalActive, image, imageAlt, imageSet1, imageSet2, imageSet3} = this.state;
 
 		return (
 			<div className='Event_Hunter__ctn'>
@@ -128,8 +149,8 @@ class EventHunter extends Component {
 						</div>
 						<div className='row images align-items-stretch'>
 							{imageSet1.map(image => (
-								<div className='col-xs-12 col-sm-6 col-lg-3'>
-									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								<div key={image.alt} className='col-xs-12 col-sm-6 col-lg-3'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
 								</div>
 							))}
 							
@@ -141,36 +162,60 @@ class EventHunter extends Component {
 						</div>
 						<div className='row images align-items-stretch'>
 							{imageSet2.map(image => (
-								<div className='col-xs-12 col-sm-4'>
-									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								<div key={image.alt} className='col-xs-12 col-sm-4'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								</div>
+							))}
+						</div>
+						<div className='row --full --grey'>
+							<div className='col'>
+								<p>some text here</p>
+							</div>
+						</div>
+						<div className='row images align-items-stretch'>
+							{imageSet3.map(image => (
+								<div key={image.alt} className='col-xs-12 col-sm-4'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
 								</div>
 							))}
 						</div>
 					</div>
 				</section>
 
-				<section className='analysis'>
+				<section className='requirements'>
 					<div className='container'>
-						<div className='row'>
-						</div>
-					</div>
-				</section>
-
-				<section className='prototypes'>
-					<div className='container'>
-						<div className='row'>
+						<div className='row --full --pink'>
+							<div className='col'>
+								<h2>Requirements Analysis</h2>
+								<p>some text here</p>
+							</div>
 						</div>
 					</div>
 				</section>
 
 				<section className='evaluation'>
 					<div className='container'>
-						<div className='row'>
+						<div className='row --full --pink'>
+							<div className='col'>
+								<h2>Prototypes</h2>
+								<p>some text here</p>
+							</div>
 						</div>
 					</div>
 				</section>
 
-				<Modal open={modalActive} closeModal={this.closeModal} image={image} />
+				<section className='prototypes'>
+					<div className='container'>
+						<div className='row --full --pink'>
+							<div className='col'>
+								<h2>Evaluation & Next Step</h2>
+								<p>some text here</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<Modal open={modalActive} closeModal={this.closeModal} image={image} alt={imageAlt} />
 
 			</div>
 		)

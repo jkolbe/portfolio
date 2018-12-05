@@ -41,8 +41,6 @@
   align-items: center;
   height: 100vh;
   color: white; }
-  .Hero__ctn .hero {
-    z-index: 1; }
   .Hero__ctn h1 {
     font-family: "Parisienne", cursive; }
   .Hero__ctn .dotted {
