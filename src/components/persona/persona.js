@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Bio from './bio';
 import List from './list';
 import Bar from './bar';
+import User from './user';
 
 import './persona.css'
 
@@ -45,17 +46,21 @@ class Persona extends Component {
 
     return (
       <div className='Persona__ctn'>
-        <div className="col-8">
-          <Bio />
-          <List title='Influences' list={influences} />
-          <List title='Needs' list={needs} />
+        <div className='col-25'>
+          <User />
         </div>
-        <div className="col-4">
+        <div className='col-75'>
+          <Bio />
+          <div className="list_wrapper">
+            <List title='Influences' list={influences} />
+            <List title='Needs' list={needs} />
+          </div>
+        </div>
+        <div className='col-25'>
           <Bar id='motivations' title='Motivations' data={motivations} />
           <Bar id='channels' title='Channels' data={channels} />
         </div>
       </div>
-
     );
   }
 }

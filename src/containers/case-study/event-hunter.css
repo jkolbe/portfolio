@@ -1,0 +1,110 @@
+.draw {
+  box-sizing: border-box;
+  transition: color 0.25s;
+  position: relative;
+  vertical-align: middle; }
+  .draw::before, .draw::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+  .draw::before {
+    top: 0;
+    left: 0; }
+  .draw::after {
+    bottom: 0;
+    right: 0; }
+  .draw:hover {
+    color: #FA7F77; }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%; }
+  .draw:hover::before {
+    border-top-color: #FA7F77;
+    border-right-color: #FA7F77;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .draw:hover::after {
+    border-bottom-color: #FA7F77;
+    border-left-color: #FA7F77;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+.Event_Hunter__ctn section {
+  padding: 0; }
+
+.Event_Hunter__ctn .row {
+  padding: 50px 0; }
+  .Event_Hunter__ctn .row.--full {
+    position: relative; }
+    .Event_Hunter__ctn .row.--full:before, .Event_Hunter__ctn .row.--full:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0; }
+    .Event_Hunter__ctn .row.--full:before {
+      right: 100%; }
+    .Event_Hunter__ctn .row.--full:after {
+      left: 100%; }
+  .Event_Hunter__ctn .row.--pink {
+    background-color: #F6C7B7; }
+    .Event_Hunter__ctn .row.--pink:before, .Event_Hunter__ctn .row.--pink:after {
+      background-color: #F6C7B7; }
+  .Event_Hunter__ctn .row.--grey {
+    background-color: #F0F0F0; }
+    .Event_Hunter__ctn .row.--grey:before, .Event_Hunter__ctn .row.--grey:after {
+      background-color: #F0F0F0; }
+
+.Event_Hunter__ctn .header {
+  background-color: #333;
+  color: white; }
+  .Event_Hunter__ctn .header h1 {
+    font-size: 50px;
+    text-transform: uppercase; }
+  .Event_Hunter__ctn .header .type {
+    font-size: 24px; }
+
+.Event_Hunter__ctn .project {
+  background-color: #F0F0F0; }
+
+.Event_Hunter__ctn .images > div {
+  margin-bottom: 24px; }
+
+.Event_Hunter__ctn .images .image {
+  height: 100%;
+  padding: 12px;
+  border: 1px dashed #F7A398;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative; }
+  .Event_Hunter__ctn .images .image:hover {
+    opacity: 0.7; }
+    .Event_Hunter__ctn .images .image:hover:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(250, 127, 119, 0.8); }
+    .Event_Hunter__ctn .images .image:hover:after {
+      content: attr(data-val);
+      color: black;
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 24px;
+      width: 100%;
+      text-align: center;
+      font-weight: 600; }
+  .Event_Hunter__ctn .images .image img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
