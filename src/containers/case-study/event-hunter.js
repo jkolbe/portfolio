@@ -13,10 +13,31 @@ import surveyFull from './../../utils/images/survey-full.jpg';
 import interviewCut from './../../utils/images/interview-cut.jpg';
 import interviewFull from './../../utils/images/interview-full.jpg';
 import affinityDiagram from './../../utils/images/affinity-diagram.png';
-
 import persona from './../../utils/images/persona.jpg';
 import empathyMap from './../../utils/images/empathy-map.jpg';
 import asIsScenario from './../../utils/images/as-is-scenario.jpg';
+import needStatements from './../../utils/images/need-statements.jpg';
+import bigIdeas from './../../utils/images/big-ideas.jpg';
+import priotizationGrid from './../../utils/images/priotization-grid.jpg';
+import toBeScenario from './../../utils/images/to-be-scenario.jpg';
+import hills from './../../utils/images/hills.jpg';
+import sketches from './../../utils/images/sketches.jpg';
+import usabilityFull from './../../utils/images/usability-full.jpg';
+import usabilityCut from './../../utils/images/usability-cut.jpg';
+import usabilityResults from './../../utils/images/usability-results.png';
+
+import screen1 from './../../utils/images/mid-fi/screen1.png';
+import screen2 from './../../utils/images/mid-fi/screen2.png';
+import screen3 from './../../utils/images/mid-fi/screen3.png';
+import screen4 from './../../utils/images/mid-fi/screen4.png';
+import screen5 from './../../utils/images/mid-fi/screen5.png';
+import screen6 from './../../utils/images/mid-fi/screen6.png';
+import screen6cut from './../../utils/images/mid-fi/screen6-cut.png';
+import screen7 from './../../utils/images/mid-fi/screen7.png';
+import screen7cut from './../../utils/images/mid-fi/screen7-cut.png';
+import screen8 from './../../utils/images/mid-fi/screen8.png';
+import screen8cut from './../../utils/images/mid-fi/screen8-cut.png';
+
 
 import './event-hunter.css'
 
@@ -84,6 +105,94 @@ class EventHunter extends Component {
     				fullsrc: asIsScenario,
     				alt: 'As-Is Scenario'
     			},
+    		],
+    		imageSet4: [
+    			{
+    				src: needStatements,
+    				fullsrc: needStatements,
+    				alt: 'Need Statements'
+    			},
+    			{
+    				src: bigIdeas,
+    				fullsrc: bigIdeas,
+    				alt: 'Big Ideas'
+    			},
+    			{
+    				src: priotizationGrid,
+    				fullsrc: priotizationGrid,
+    				alt: 'Priotization Grid'
+    			},
+    		],
+    		imageSet5: [
+    			{
+    				src: toBeScenario,
+    				fullsrc: toBeScenario,
+    				alt: 'To Be Scenario'
+    			},
+    			{
+    				src: hills,
+    				fullsrc: hills,
+    				alt: 'Hills'
+    			}
+    		],
+    		imageSet6: [
+    			{
+    				src: sketches,
+    				fullsrc: sketches,
+    				alt: 'Sketches'
+    			},
+    			{
+    				src: usabilityCut,
+    				fullsrc: usabilityFull,
+    				alt: 'Usability Testing'
+    			},
+    			{
+    				src: usabilityResults,
+    				fullsrc: usabilityResults,
+    				alt: 'Usability Results'
+    			}
+    		],
+    		imageSet7: [
+    			{
+    				src: screen1,
+    				fullsrc: screen1,
+    				alt: 'Event Hunter Login'
+    			},
+    			{
+    				src: screen2,
+    				fullsrc: screen2,
+    				alt: 'Event Hunter Browse'
+    			},
+    			{
+    				src: screen3,
+    				fullsrc: screen3,
+    				alt: 'Event Hunter Swipe'
+    			},
+    			{
+    				src: screen4,
+    				fullsrc: screen4,
+    				alt: 'Event Hunter Menu'
+    			},
+    			{
+    				src: screen5,
+    				fullsrc: screen5,
+    				alt: 'Event Hunter Settings'
+    			},
+    			{
+    				src: screen6cut,
+    				fullsrc: screen6,
+    				alt: 'Event Hunter Interests'
+    			},
+    			{
+    				src: screen7cut,
+    				fullsrc: screen7,
+    				alt: 'Event Hunter Likes'
+    			},
+    			{
+    				src: screen8cut,
+    				fullsrc: screen8,
+    				alt: 'Event Hunter Details'
+    			}
     		]
     	};
 	}
@@ -101,7 +210,7 @@ class EventHunter extends Component {
 	}
 
 	render() {
-		const {steps, modalActive, image, imageAlt, imageSet1, imageSet2, imageSet3} = this.state;
+		const {steps, modalActive, image, imageAlt, imageSet1, imageSet2, imageSet3, imageSet4, imageSet5, imageSet6, imageSet7} = this.state;
 
 		return (
 			<div className='Event_Hunter__ctn'>
@@ -110,7 +219,7 @@ class EventHunter extends Component {
 					<div className='container'>
 						<div className='row align-items-center'>
 							<div className='col-xs-12 col-sm-7'>
-								<h1>Connecting Users to Events</h1>
+								<h1>Connecting Users to Local Events</h1>
 
 								<ReactTypingEffect
 								className='type'
@@ -157,7 +266,7 @@ class EventHunter extends Component {
 						</div>
 						<div className='row --full --grey'>
 							<div className='col'>
-								<p>I have then performed Interviews and Surveys in order to generate Primary Research data from representative users. I have decided to combine Interviews and Surveys to get a good mix of quantitative and qualitative data that would help me to create a big picture for the problem space with supplementary information to identify any gaps that arised. Affinity Diagram was used to summarize the findings.</p>
+								<p>I have then performed Interviews and Surveys in order to generate Primary Research data from representative users (who live, work, or attending school in Toronto and attend events). I have decided to combine Interviews and Surveys to get a good mix of quantitative and qualitative data that would help me to create a big picture for the problem space with supplementary information to identify any gaps that arised. Affinity Diagram was used to summarize the findings.</p>
 							</div>
 						</div>
 						<div className='row images align-items-stretch'>
@@ -169,7 +278,7 @@ class EventHunter extends Component {
 						</div>
 						<div className='row --full --grey'>
 							<div className='col'>
-								<p>some text here</p>
+								<p>Based on the research findings I was able to create a persona, empathy map and as-is scenario. All of the items represent important characteristics about the user, tasks that she performs and context that influences her behaviour.</p>
 							</div>
 						</div>
 						<div className='row images align-items-stretch'>
@@ -187,8 +296,27 @@ class EventHunter extends Component {
 						<div className='row --full --pink'>
 							<div className='col'>
 								<h2>Requirements Analysis</h2>
-								<p>some text here</p>
+								<p>User research provided me with relevant context that influenced the solution design. I have began by generating need statements that focus on the persona’s pain points as identified previously in the empathy map and as-is scenario. I have then proceeded with big idea generation focusing on the most important opportunities for improvement. Once they have been generated, our group voted on them in terms of feasibility and impact and prioritized them in a prioritization grid.</p>
 							</div>
+						</div>
+						<div className='row images align-items-stretch'>
+							{imageSet4.map(image => (
+								<div key={image.alt} className='col-xs-12 col-sm-4'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								</div>
+							))}
+						</div>
+						<div className='row --full --grey'>
+							<div className='col'>
+								<p>Using the prioritization grid I was able to generate a to-be scenario for my solution and put together hill statements to align my group around the solution. It has allowed us to develop a shared understanding of intent so everyone could pull in the same direction.</p>
+							</div>
+						</div>
+						<div className='row images align-items-stretch'>
+							{imageSet5.map(image => (
+								<div key={image.alt} className='col-xs-12 col-sm-6'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								</div>
+							))}
 						</div>
 					</div>
 				</section>
@@ -198,8 +326,29 @@ class EventHunter extends Component {
 						<div className='row --full --pink'>
 							<div className='col'>
 								<h2>Prototypes</h2>
-								<p>some text here</p>
+								<p>The key goal of this portion of the project was to prototype a Minimal Viable Product (MVP) that focuses on the happy path only. With the hill statements in mind, I have selected features that would address user’s needs, such as centralization of events, and personalization based on interest, location, distance, and cost.</p>
+								<p>I have then generated hand-drawn paper sketches representing the ideation process for the low-fidelity prototype. The sketches were then used to conduct lean evaluation of the ideas through usability testing from representative users. I have conducted a short interview using a think-aloud protocol that included a mix of open-ended and task-oriented questions. A summary of the findings was developed on a whiteboard.</p>
 							</div>
+						</div>
+						<div className='row images align-items-stretch'>
+							{imageSet6.map(image => (
+								<div key={image.alt} className='col-xs-12 col-sm-4'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								</div>
+							))}
+						</div>
+						<div className='row --full --grey'>
+							<div className='col'>
+								<p>Feedback from usability testing was processed and used to influence the design decisions during the next phase of the project - mid-fidelity prototype. I have used figma, a collaborative online prototyping tool, to create a set of screens leveraging industry’s best practices. I have then linked them together to present an app-like experience.</p>
+								<p><a href="https://www.figma.com/proto/IKvwEW2Q2InJJYterHh92E99/1602-prototype?node-id=1%3A3&scaling=scale-down" target="_blank" rel="noopener noreferrer">Click here to see it in action.</a></p>
+							</div>
+						</div>
+						<div className='row images align-items-stretch'>
+							{imageSet7.map(image => (
+								<div key={image.alt} className='col-xs-12 col-sm-3'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								</div>
+							))}
 						</div>
 					</div>
 				</section>

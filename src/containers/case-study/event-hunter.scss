@@ -2,6 +2,10 @@
 
 .Event_Hunter__ctn {
 
+  a {
+    color: $pink-dark;
+  }
+
 	section {
 		padding: 0;
 	}
@@ -65,8 +69,12 @@
   			padding: 12px;
   			border: 1px dashed $pink-medium;
   			cursor: pointer;
-    		transition: 0.3s;
+    		transition: 0.5s;
     		position: relative;
+        &:before {
+            content: '';
+            transition: all 0.5s;
+        }
     		&:hover {
     			&:before {
     				content: '';
@@ -76,7 +84,7 @@
     				width: 100%;
     				height: 100%;
     				z-index: 1;
-    				background-color: rgba($black, 0.9);
+    				background-color: rgba($black, 0.8);
     			}
     			&:after {
 					content: attr(data-val);
