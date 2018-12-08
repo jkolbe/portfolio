@@ -30,7 +30,7 @@ class Nav extends Component {
   componentDidUpdate(prevProps, prevState, snapshot){
     if(this.props.location.pathname !== prevProps.location.pathname) {
       this.setState({
-        homePage: !(this.props.location.pathname.includes("case-study"))
+        homePage: this.props.location.pathname === '/'
       })
     }
   }
