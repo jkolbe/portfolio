@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PortfolioItem from './portfolio-item';
 import './portfolio.css'
 
+import events from './../../utils/images/events.png';
+import syllabus from './../../utils/images/syllabus.png';
+
 class Portfolio extends Component {
 
   constructor(){
@@ -11,7 +14,15 @@ class Portfolio extends Component {
         {
           id: 'event-hunter',
           title: 'Connecting Users to Local Events',
-          'description': 'Raising the awareness and promotion of local events. Informing users about what’s happening in their neighbourhood so they would never feel like they’re missing out.'},
+          description: 'Raising the awareness and promotion of local events. Informing users about what’s happening in their neighbourhood so they would never feel like they’re missing out.',
+          image: events
+        },
+        {
+          id: 'inf2169',
+          title: 'What was this course about?',
+          description: 'Visual representation of the INF2169 - User-Centred Information Systems Development course taught by professor Dan Ryan',
+          image: syllabus
+        }
       ]
     }
   }
