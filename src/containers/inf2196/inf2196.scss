@@ -1,3 +1,19 @@
 @import './../../utils/scss/helpers.scss';
 
-.Inf2196__ctn {  }
+.Inf2196__ctn {
+
+	.header {
+		background-color: $black;
+    	color: white;
+
+    	h1 {
+        	font-size: 50px;
+        	text-transform: uppercase;
+      	}
+	}
+
+	.tree {
+		background-color: $grey-light;
+	}
+
+}

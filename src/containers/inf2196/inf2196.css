@@ -31,3 +31,13 @@
     border-bottom-color: #FA7F77;
     border-left-color: #FA7F77;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+.Inf2196__ctn .header {
+  background-color: #333;
+  color: white; }
+  .Inf2196__ctn .header h1 {
+    font-size: 50px;
+    text-transform: uppercase; }
+
+.Inf2196__ctn .tree {
+  background-color: #F0F0F0; }
