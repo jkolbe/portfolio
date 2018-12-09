@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tree from 'react-animated-tree'
+import ReactTypingEffect from 'react-typing-effect';
 
 import './inf2196.css'
 
@@ -18,7 +19,7 @@ class Inf2196 extends Component {
 	constructor() {
 		super();
 		this.state = {
-			steps: ['Research.', 'Analysis.', 'Design.', 'Evaluation.'],
+			steps: [],
 			data: [
 				{
 					title: "Introduction",
@@ -672,10 +673,14 @@ class Inf2196 extends Component {
 		}
 	}
 
+	getTopics = (data) => {
+		return data.map(d => d.title)
+	}
+
 	TreeData = ({data}, level = 0) => {
 		return (
 			data.map(m => {
-				return (<Tree content={m.title} open={level === 0}>
+				return (<Tree key={m.title} content={m.title} open={level === 0}>
 					{m.children && <this.TreeData data={m.children} level={1} />}
 				</Tree>);
 			})
@@ -694,6 +699,13 @@ class Inf2196 extends Component {
 						<div className='row align-items-center'>
 							<div className='col'>
 								<h1>What was this course about?</h1>
+								<ReactTypingEffect
+									className='type'
+									speed={80}
+									eraseDelay={500}
+									text={this.getTopics(data)}
+									cursorClassName='type-cursor'
+								/>
 							</div>
 						</div>
 					</div>
