@@ -116,7 +116,7 @@ class Training extends Component {
     window.addEventListener('scroll', this.animateTimeline);
 
     try {
-      this.timeline_items = document.querySelectorAll('.timeline li');
+      this.timeline_items = document.querySelectorAll('.timeline .timeline-badge');
     } catch (e) {
         console.log(e)
     }
@@ -132,7 +132,7 @@ class Training extends Component {
   animateTimeline = () => {
     for (var i = 0; i < this.timeline_items.length; i++) {
       if (this.isElementInViewport(this.timeline_items[i])) {
-        this.timeline_items[i].classList.add("in-view");
+        this.timeline_items[i].parentNode.classList.add("in-view");
       }
     }
   }

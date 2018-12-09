@@ -22,6 +22,10 @@ body {
   color: $black;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 section {
   padding: 50px 0px;
   @include screen-mobile-only {
