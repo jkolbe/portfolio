@@ -38,6 +38,15 @@ import screen7cut from './../../utils/images/mid-fi/screen7-cut.png';
 import screen8 from './../../utils/images/mid-fi/screen8.png';
 import screen8cut from './../../utils/images/mid-fi/screen8-cut.png';
 
+import d1 from './../../utils/images/decide/D1.jpg';
+import e1 from './../../utils/images/decide/E1.jpg';
+import c from './../../utils/images/decide/C.jpg';
+import i1 from './../../utils/images/decide/I1.jpg';
+import i2 from './../../utils/images/decide/I2.jpg';
+import i3 from './../../utils/images/decide/I3.jpg';
+import d2 from './../../utils/images/decide/D2.jpg';
+import e2 from './../../utils/images/decide/E2.jpg';
+
 
 import './event-hunter.css'
 
@@ -193,6 +202,48 @@ class EventHunter extends Component {
     				fullsrc: screen8,
     				alt: 'Event Hunter Details'
     			}
+    		],
+    		imageSet8: [
+    			{
+    				src: d1,
+    				fullsrc: d1,
+    				alt: 'Determine the goal(s) of your evaluation'
+    			},
+    			{
+    				src: e1,
+    				fullsrc: e1,
+    				alt: 'Explore the questions of your evaluation'
+    			},
+    			{
+    				src: c,
+    				fullsrc: c,
+    				alt: 'Choose the evaluation methods'
+    			},
+    			{
+    				src: i1,
+    				fullsrc: i1,
+    				alt: 'Identify the practical issues - part 1'
+    			},
+    			{
+    				src: i2,
+    				fullsrc: i2,
+    				alt: 'Identify the practical issues - part 2'
+    			},
+    			{
+    				src: i3,
+    				fullsrc: i3,
+    				alt: 'Identify the practical issues - part 3'
+    			},
+    			{
+    				src: d2,
+    				fullsrc: d2,
+    				alt: 'Deal with ethical issues'
+    			},
+    			{
+    				src: e2,
+    				fullsrc: e2,
+    				alt: 'Evaluate, analyze, interpret, and present the data'
+    			},
     		]
     	};
 	}
@@ -210,7 +261,7 @@ class EventHunter extends Component {
 	}
 
 	render() {
-		const {steps, modalActive, image, imageAlt, imageSet1, imageSet2, imageSet3, imageSet4, imageSet5, imageSet6, imageSet7} = this.state;
+		const {steps, modalActive, image, imageAlt, imageSet1, imageSet2, imageSet3, imageSet4, imageSet5, imageSet6, imageSet7, imageSet8} = this.state;
 
 		return (
 			<div className='Event_Hunter__ctn'>
@@ -358,7 +409,41 @@ class EventHunter extends Component {
 						<div className='row --full --pink'>
 							<div className='col'>
 								<h2>Evaluation & Next Step</h2>
-								<p>some text here</p>
+								<p>Once the medium-fidelity prototype was completed, I have conducted a summative usability evaluation using the DECIDE framework. I have began by determining the overall goal of the evaluation and exploring questions that would help to determine the goal. Observations and Interviews were then chosen as the data gathering techniques where each observations task was derived from need statements and hills. Once the evaluation was conducted, I have summarized the findings on a whiteboard.</p>
+							</div>
+						</div>
+						<div className='row images align-items-stretch'>
+							{imageSet8.map(image => (
+								<div key={image.alt} className='col-xs-12 col-sm-6 col-md-3'>
+									<div className='image' data-val={image.alt} onClick={(e) => this.imageClick(image.fullsrc, image.alt)} ><img src={image.src} className="img-fluid" alt={image.alt} /></div>
+								</div>
+							))}
+						</div>
+						<div className='row --full --grey'>
+							<div className='col'>
+								<p>For the next steps in the project I will incorporate feedback from the usability evaluation, making sure all aspects that created confusion in the application will be resolved. I will also start exploring features that could be beneficial to potential users, such as: searching for a specific event or ability to create a new event.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section className='credits'>
+					<div className='container'>
+						<div className='row'>
+							<div className='col'>
+								<h2>Credits</h2>
+								<p>I would like to thank all of my group members for their involvement and participation in this case study:</p>
+								<ul>
+									<li>
+										<a target='_blank' rel='noopener noreferrer' href="mailto:tiana.guido@mail.utoronto.ca">Tiana Guido</a>
+									</li>
+									<li>	
+										<a target='_blank' rel='noopener noreferrer' href="mailto:ifrah.yousuf@mail.utoronto.ca">Ifrah Yousuf</a>
+									</li>
+									<li>
+										<a target='_blank' rel='noopener noreferrer' href="mailto:hs.yoon@mail.utoronto.ca">Hs Yoon</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
