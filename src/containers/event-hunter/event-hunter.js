@@ -304,7 +304,7 @@ class EventHunter extends Component {
 						<div className='row --full --pink'>
 							<div className='col'>
 								<h2>User Research & Analysis</h2>
-								<p>I have began the activation journey by exploring the problem of current event management domain, its set of users, and the constraints that are involved in the problem. I have collected data and performed an analysis of the data gathered in order to gain solid understanding of the problem I wanted to tackle. I have looked at existing platforms used to find and share events including: websites, social media, articles, and blogs. I have consolidated my findings using a consolidation table which included observations, interpretations, and implications from the existing platforms.</p>
+								<p>I have began the design thinking process by exploring the problem of current event management domain, its set of users, and the constraints that are involved in the problem. I have collected data and performed an analysis of the data gathered in order to gain solid understanding of the problem I wanted to tackle. I have looked at existing platforms used to find and share events including: websites, social media, articles, and blogs. I have consolidated my findings using a consolidation table which included observations, interpretations, and implications from the existing platforms.</p>
 							</div>
 						</div>
 						<div className='row images align-items-stretch'>
